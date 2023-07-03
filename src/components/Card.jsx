@@ -5,9 +5,9 @@ const Card = ({data}) => {
   return (
     <div className={CardStyle.container}>
       {data.map((item) =>{
-        const {img,comment,job,name}=item
+        const {id,img,comment,job,name}=item
         return(
-          <div className={CardStyle.card}>
+          <div key={id} className={CardStyle.card}>
             <h1>{name}</h1>
             <h3>{job}</h3>
             <p>{comment}</p>
